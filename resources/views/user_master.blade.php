@@ -38,6 +38,13 @@
     <!-- Custom Fonts -->
     <link href="bootstrap/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
 </head>
 
 <body>
@@ -64,49 +71,14 @@
                     <li>
                         <a href="{{url('konsumen')}}">Konsumen</a>
                     </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pembelian <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="{{url('pembelian')}}">Pembelian</a>
-                            </li>
-                            <li>
-                                <a href="{{url('detail_pembelian')}}">Detail Pembelian</a>
-                            </li>
-                        </ul>
+                    <li>
+                        <a href="{{url('pembelian')}}">Pembelian</a>
                     </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Barang <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="{{url('barang')}}">Barang</a>
-                            </li>
-                            <li>
-                                <a href="{{url('kategori')}}">Kategori</a>
-                            </li>
-                        </ul>
+                    <li>
+                        <a href="{{url('barang')}}">Barang</a>
                     </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Transaksi <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="{{url('transaksi')}}">Transaksi</a>
-                            </li>
-                            <li>
-                                <a href="{{url('detail_transaksi')}}">Detail Transaksi</a>
-                            </li>
-                        </ul>
-                        <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Data <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="{{url('admin')}}">Bos</a>
-                            </li>
-                            <li>
-                                <a href="{{url('karyawan')}}">Karyawan</a>
-                            </li>
-                        </ul>
-                    </li>
+                    <li>
+                        <a href="{{url('transaksi')}}">Transaksi</a>
                     </li>
                     <li>
                         <a href="{{url('/logout')}}">Logout</a>

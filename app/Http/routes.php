@@ -10,6 +10,27 @@
 | and give it the controller to call when that URI is requested.
 |
 */
+Route::group(['middleware' => 'web'], function(){
+	
+	Route::auth();
+});
+
+Route::group(['middleware' => ['web','auth']], function()
+{
+	Route::get('/home','HomeController@index');
+	Route::get('/', function(){
+		if (Auth::user()->admin == 1) {
+			return view('master');
+
+		} else {
+			return view('user_master');
+		}
+	});
+});
+
+Route::get('admin',['middleware' => ['web','auth','admin'],function(){
+	return view('admin/admin_home');
+}]);
 
 Route::get('admin','adminController@awal');
 Route::get('admin/tambah','adminController@tambah');
@@ -105,3 +126,6 @@ Route::get('detail_transaksi/hapus/{detail_transaksi}','detail_transaksiControll
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+Route::auth();
+
+Route::get('/home', 'HomeController@index');
